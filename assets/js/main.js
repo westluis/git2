@@ -8,7 +8,7 @@ var jgam = "";
 
 var veces= prompt("¿cuantas manos quiere jugar al cachipun?");
 for (i=1; i<=veces; i++) {
-            jugador= prompt ("Elige tu jugada escribiendo un numero: 0 = piedra; 1 = papel;  2 = tijera")
+            jugador= prompt ("Elige tu jugada escribiendo un numero: piedra=0; papel=1; tijera=2")
     computadora= Math.floor(Math.random()*3);
 
             if (computadora==0){
@@ -37,12 +37,25 @@ for (i=1; i<=veces; i++) {
             if( computadora == jugador) {
             empate++;
             }
-            else if( computadora > jugador) {
-            casa++;
-            }
-            else {
+            else if( computadora==0 && jugador==1) {
             gambler++;
             }
+            else if( computadora==0 && jugador==2) {
+            casa++;
+            }
+            else if( computadora==1 && jugador==0) {
+                casa++;
+            }
+            else if( computadora==1 && jugador==2) {
+                gambler++;
+            }
+            else if( computadora==2 && jugador==0) {
+                gambler++;
+            }
+            else if( computadora==2 && jugador==1) {
+                casa++;
+            }
+            
  
 }
 
